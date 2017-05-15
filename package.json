@@ -1,0 +1,22 @@
+{
+  "name": "@forzoom/normalize",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forzoom/normalize.git"
+  },
+  "author": "Forzoom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Forzoom/normalize/issues"
+  },
+  "homepage": "https://github.com/Forzoom/normalize#readme",
+  "dependencies": {
+    "weui": "^1.1.2"
+  }
+}

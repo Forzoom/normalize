@@ -1,0 +1,126 @@
+@import "./util.less";
+
+// 因为height根据js来处理，所以
+.picker-center-highlight {
+    .xtrM(height, 36);
+}
+
+// picker.vue
+.picker-toolbar {
+    .xtrM(height, unit(40px));
+}
+.picker-items {
+    .xtrM(font-size, unit(24px));
+}
+
+.picker-center-highlight {
+    .xtrM(margin-top, unit(-18px));
+}
+
+// picker-slot
+.picker-slot {
+    .xtrM(font-size, 18);
+}
+
+// .picker-item {
+//     .xtrM(height, 36); // 不再使用，因为使用js来控制大小
+//     .xtrM(line-height, 36);
+//     .comDis(padding, 0, 10);
+// }
+.picker-3d .picker-items {
+    overflow: hidden;
+    perspective: 700px;
+}
+
+// datetime-picker (postcss)
+@color-blue: #26a2ff;
+.mint-datetime {
+    width: 100%;
+
+    .picker-slot-wrapper, .picker-item {
+        backface-visibility: hidden;
+    }
+
+    .picker-toolbar {
+        border-bottom: solid 1px #eaeaea;
+    }
+
+    .mint-datetime-action {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        .xtrM(line-height, 40);
+        .xtrM(font-size, 16);
+        color: @color-blue;
+    }
+
+    .mint-datetime-cancel {
+        float: left;
+    }
+
+    .mint-datetime-confirm {
+        float: right;
+    }
+}
+
+// message box
+.mint-msgbox {
+
+    .xtr(border-radius, 3);
+    .xtr(font-size, 16);
+
+    .mint-msgbox-header {
+        .xtr(padding-top, 15);
+        .xtr(font-size, 16);
+    }
+
+    .mint-msgbox-content {
+        .xtr(padding-top, 10);
+        .xtr(padding-right, 20);
+        .xtr(padding-bottom, 15);
+        // padding: 10px 20px 15px;
+        border-bottom: 1px solid #ddd;
+        .xtr(min-height, 36);
+    }
+
+    .mint-msgbox-input {
+        .xtr(padding-top, 15);
+        & input {
+            border: 1px solid #dedede;
+            .xtr(border-radius, 5);
+            .comDis(padding, 4, 5);
+        }
+    }
+
+    .mint-msgbox-errormsg {
+        .xtr(font-size, 12);
+        .xtr(min-height, 18);
+        .xtr(margin-top, 2);
+    }
+
+    .mint-msgbox-title {
+        .xtr(font-size, 16);
+    }
+
+    .mint-msgbox-message {
+        .xtr(line-height, 36);
+        .xtr(font-size, 16);
+    }
+
+    .mint-msgbox-btns {
+        .xtr(height, 40);
+        .xtr(line-height, 40);
+    }
+
+    .mint-msgbox-btn {
+        .xtr(line-height, 35);
+        &.mint-msgbox-cancel,
+        &.mint-msgbox-confirm {
+            .xtr(font-size, 16);
+        }
+    }
+
+    .mint-msgbox-cancel {
+        // border-right: 1px solid #ddd;
+    }
+}

@@ -1,0 +1,111 @@
+@import "../node_modules/weui/src/style/weui.less";
+
+// 主色调
+@primary: #29b6f6;
+
+// base
+@dpr: 2;
+@ratio: 80 / @dpr;
+
+// cell
+// color
+@weuiColorPrimary: @primary;
+
+@weuiCellBg: #FFFFFF;
+@weuiCellBorderColor: #e5e5e5;
+@weuiCellGapV: unit(10px) / @ratio * 1rem;
+@weuiCellGapH: unit(15px) / @ratio * 1rem;
+@weuiCellInnerGapH: .35em;
+@weuiCellHeight: unit(45px) / @ratio * 1rem;
+@weuiCellFontSize: unit(17px) / @ratio * 1rem;
+@weuiCellTipsFontSize: unit(14px) / @ratio * 1rem;
+@weuiCellLabelWidth: unit(105px) / @ratio * 1rem;
+
+@weuiCheckboxFontSize: 23 / @ratio * 1rem;
+@weuiRadioFontSize: 16 / @ratio * 1rem;
+
+// button
+// color
+@weuiBtnPrimaryBg: @primary;
+@weuiBtnPrimaryDisabledBg: lighten(@weuiBtnPrimaryBg, 10%);
+@weuiBtnPrimaryActiveBg: darken(@weuiBtnPrimaryBg, 10%);
+@weuiBtnHeight: 46 / @ratio * 1rem;
+@weuiBtnFontSize: 18 / @ratio * 1rem;
+
+// button
+.weui-btn {
+    font-size: @weuiBtnFontSize;
+}
+
+// check
+.weui-cells_checkbox {
+    .weui-icon-checked {
+        &:before {
+            font-size: @weuiCheckboxFontSize;
+        }
+    }
+}
+
+// radio
+.weui-check {
+    // radio
+    .weui-cells_radio & {
+        &:checked {
+            & + .weui-icon-checked {
+                &:before {
+                    font-size: @weuiRadioFontSize;
+                    color: @weuiColorPrimary; // 更换icon颜色
+                }
+            }
+        }
+    }
+}
+
+.weui-check {
+    // checkbox
+    .weui-cells_checkbox & {
+        &:checked {
+            & + .weui-icon-checked {
+                &:before {
+                    color: @weuiColorPrimary; // 更换icon颜色
+                }
+            }
+        }
+    }
+}
+
+// toast
+.weui-toast {
+    width: unit(7.6em) * 16 / @ratio * 1rem;
+    min-height: unit(7.6em) * 16 / @ratio * 1rem;
+    top: unit(180px) / @ratio * 1rem;
+    margin-left: unit(-3.8em) * 16 / @ratio * 1rem;
+    border-radius: unit(5px) / @ratio * 1rem;
+}
+.weui-icon_toast {
+    margin: unit(22px) / @ratio * 1rem 0 0;
+    &.weui-icon-success-no-circle {
+      &:before {
+          font-size: unit(55px) / @ratio * 1rem;
+      }
+    }
+    &.weui-loading {
+      margin: unit(30px) / @ratio * 1rem 0 0;
+      width: unit(38px) / @ratio * 1rem;
+      height: unit(38px) / @ratio * 1rem;
+    }
+}
+
+.weui-toast__content {
+    margin: 0 0 unit(15px) / @ratio * 1rem;
+    font-size: 16 / @ratio * 1rem;
+}
+
+// footer
+.weui-footer {
+    font-size: unit(14px) / @ratio * 1rem;
+}
+.weui-footer__text{
+    padding: unit(0.34em) * 16 / @ratio * 1rem;
+    font-size: unit(12px) / @ratio * 1rem;
+}
